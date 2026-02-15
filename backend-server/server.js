@@ -22,7 +22,10 @@ app.use("/api/inngest", serve({ client: inngest, functions }));
 app.use("/api/user", userRouter);
 app.use("/api/post", postRouter);
 
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () =>
-  console.log(`🚀 Server running on http://localhost:${PORT}`)
-);
+// const PORT = process.env.PORT || 4000;
+// app.listen(PORT, () =>
+//   console.log(`🚀 Server running on http://localhost:${PORT}`)
+// );
+
+// 👇 THIS IS REQUIRED FOR VERCEL
+export default app;
